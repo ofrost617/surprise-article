@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './css/index.css';
 
-import App from './components/App';
+import App from './components/App'
+import Begin from './components/Begin';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -14,7 +15,8 @@ const Root = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={Begin} />
+        <Route exact path="/article" component={App} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
