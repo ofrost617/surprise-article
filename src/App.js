@@ -9,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="article-picker">
-        <Header tagline="Article Blackjack" />
+        <Header appname="Article Blackjack" />
         <Article/>
       </div>
     )
