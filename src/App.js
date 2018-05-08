@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ArticlePicker from './ArticlePicker'
+import Header from './Header'
+
 
 class App extends React.Component {
   render() {
