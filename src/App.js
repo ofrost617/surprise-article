@@ -8,8 +8,8 @@ import Header from './Header'
 class App extends React.Component {
   render() {
     return (
-      <div className="article-blackjack">
-        <Header/>
+      <div className="article-picker">
+        <Header tagline="Article Blackjack" />
         <Article/>
       </div>
     )
@@ -19,4 +19,4 @@ class App extends React.Component {
 
 export default App;
 
-  
+   
