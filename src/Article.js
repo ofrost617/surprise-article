@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ArticlePicker extends React.Component {
+class Article extends React.Component {
   render() {
     return (
       <div>
@@ -14,4 +14,4 @@ class ArticlePicker extends React.Component {
   }
 }
 
-export default ArticlePicker;
+export default Article;
