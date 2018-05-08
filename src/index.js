@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './css/index.css';
+
 import App from './components/App';
 import NotFound from './components/NotFound';
 import registerServiceWorker from './registerServiceWorker';
