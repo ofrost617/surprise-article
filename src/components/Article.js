@@ -5,6 +5,7 @@ class Article extends React.Component {
   // visitArticleLink = (event) => {
   //   this.props.history.push('')
   // }
+  
 
   render() {
     return (
