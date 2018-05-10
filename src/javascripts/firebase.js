@@ -12,3 +12,4 @@ firebase.initializeApp(config);
 export default firebase;
 
 // any time we need to access firebase we just import it at the top of the file
+

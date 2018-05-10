@@ -2,11 +2,6 @@ import React from 'react';
 
 class Article extends React.Component {
 
-  // visitArticleLink = (event) => {
-  //   this.props.history.push('')
-  // }
-  
-
   render() {
     return (
       <div>
@@ -14,7 +9,7 @@ class Article extends React.Component {
         <h2>This will be the title of the article</h2>
         <h3>This will be the description of the article</h3>
         <button type="button">Twist</button>
-        <button type="button" onClick={this.goToArticleSelector}>Stick</button>
+        <button type="button">Stick</button>
       </div>
     )
   }

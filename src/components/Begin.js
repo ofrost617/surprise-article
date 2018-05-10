@@ -1,5 +1,7 @@
 import React from 'react';
 
+import AddArticle from './AddArticle'
+
 class Begin extends React.Component {
   // constructor() {
   //   super();
@@ -19,6 +21,8 @@ class Begin extends React.Component {
         <h2>Got lots of saved articles and no time to choose? Let us help you out</h2>
         <p>Click below to begin</p>
         <button type="button" onClick={this.goToArticleSelector}>Give me an article</button>
+        <p>Want to add an article? Add a url below and click save</p>
+        <AddArticle/>
       </div>
     )
   }
