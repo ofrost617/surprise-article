@@ -8,7 +8,9 @@ const config = {
   storageBucket: "article-roulette.appspot.com",
   messagingSenderId: "1067162097756"
 };
+
 firebase.initializeApp(config);
+
 export default firebase;
 
 // any time we need to access firebase we just import it at the top of the file
