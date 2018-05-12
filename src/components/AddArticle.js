@@ -7,7 +7,6 @@ class AddArticle extends React.Component {
     super();
     this.state = {
       url: '',
-      articleMetaData: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,25 +20,18 @@ class AddArticle extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // Here we set up the database
     const articleMetaDataRef = firebase.database().ref('articleMetaData');
-    // Then we need to query Link Preview using the url state using axios
-    axios.get('http://api.linkpreview.net/?key=5af31b2549e9a9602772d53f84448e1fee3068238405b&q=https://www.google.com')
+    var apiUrl = 'http://api.linkpreview.net/?key=5af31b2549e9a9602772d53f84448e1fee3068238405b&q=' + this.state.url
+    axios.get(apiUrl)
       .then((response) => {
-        this.setState({articleMetaData: response.data}, function() {
-          articleMetaDataRef.push(this.state.articleMetaData);
+        articleMetaDataRef.push(response.data);
         })
-      })
       .catch((error) => {
         console.log(error);
       });
     this.setState({
       url: '',
     });
-  }
-
-  getMetaData(url) {
-
   }
 
   render() {
