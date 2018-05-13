@@ -10,7 +10,6 @@ class Begin extends React.Component {
   // This is the same as .bind(this on in the onClick but I've used the other way ay I'm only going to be rendering the begin component once on the page)
 
   goToArticleSelector = (event) => {
-    console.log('Trying to go to article');
     this.props.history.push(`article`)
 
   }
