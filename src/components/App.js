@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../css/App.css';
 
-import Article from './Article'
+import FetchArticle from './FetchArticle'
 import Header from './Header'
 
 
@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className="article-picker">
         <Header appname="Article Blackjack" />
-        <Article/>
+        <FetchArticle/>
       </div>
     )
   }

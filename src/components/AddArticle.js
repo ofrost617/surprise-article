@@ -33,6 +33,7 @@ class AddArticle extends React.Component {
       url: '',
     });
   }
+  
 
   render() {
     return (
@@ -47,4 +48,7 @@ class AddArticle extends React.Component {
   }
 }
 
-export default AddArticle
+export default AddArticle;
+
+// placeholder text is not being reshown after clicking submit, in the console the field is 
+// cleared, but in the browser window itself the text is still there
