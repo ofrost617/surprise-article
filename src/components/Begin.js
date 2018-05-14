@@ -18,6 +18,7 @@ class Begin extends React.Component {
     return (
       <div>
         <h1>Welcome to Article Blackjack!</h1>
+        <br/>
         <section>
           <h2>Too many articles and no time to choose?</h2>
           <h2>Let us help you out</h2>
@@ -26,7 +27,7 @@ class Begin extends React.Component {
         </section>
         <br/>
         <section className="addArticle">
-          <p>Want to add an article? Add a url below and click save</p>
+          <p className="addArticleCta">Want to add an article? Add a url below and click save</p>
           <AddArticle/>
         </section>
       </div>

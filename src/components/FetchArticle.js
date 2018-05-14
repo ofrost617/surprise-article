@@ -46,11 +46,13 @@ class FetchArticle extends React.Component {
   render() {
     return (
       <div>
-        <img className="thumbnail" src={this.state.randomArticle.thumbnail}/>
-        <h2>{this.state.randomArticle.title}</h2>
-        <h3>{this.state.randomArticle.description}</h3>
-        <button type="button" onClick={this.refreshPage}>Twist</button>
-        <button type="button" onClick={() => window.open(this.state.randomArticle.url)}>Stick</button>
+        <section>
+          <img className="thumbnail" src={this.state.randomArticle.thumbnail}/>
+          <h2 className="articleTitle">{this.state.randomArticle.title}</h2>
+          <h3 className="articleDescription">{this.state.randomArticle.description}</h3>
+          <button type="button" onClick={this.refreshPage}>Twist</button>
+          <button type="button" onClick={() => window.open(this.state.randomArticle.url)}>Stick</button>
+          </section>
       </div>
     )
   }
