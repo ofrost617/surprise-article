@@ -57,3 +57,6 @@ class FetchArticle extends React.Component {
 }
 
 export default FetchArticle;
+
+{/* <Route path='/privacy-policy' component={() => window.location = 'https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies'}/> */}
+//  Look into using the above as an alternative to line 53

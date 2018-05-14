@@ -7,6 +7,7 @@ class AddArticle extends React.Component {
     super();
     this.state = {
       url: '',
+      status: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,12 +26,15 @@ class AddArticle extends React.Component {
     axios.get(apiUrl)
       .then((response) => {
         articleMetaDataRef.push(response.data);
+        this.setState({status: 'success'})
         })
       .catch((error) => {
         console.log(error);
+        this.setState({status: 'failed'})
       });
     this.setState({
       url: '',
+      status: ''
     });
   }
   
@@ -39,7 +43,9 @@ class AddArticle extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Enter a url here" onChange={this.handleChange}/>
+          <input className="addArticleInput" type="text" placeholder="Enter a url here" onChange={this.handleChange}/>
+          <br/>
+          <br/>
           <button type="submit">Save Article</button>
         </form>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-
-import AddArticle from './AddArticle'
+import { withRouter} from 'react-router-dom';
+import AddArticle from './AddArticle';
+import '../css/Styles.css';
 
 class Begin extends React.Component {
   // constructor() {
@@ -17,14 +18,20 @@ class Begin extends React.Component {
     return (
       <div>
         <h1>Welcome to Article Blackjack!</h1>
-        <h2>Got lots of saved articles and no time to choose? Let us help you out</h2>
-        <p>Click below to begin</p>
-        <button type="button" onClick={this.goToArticleSelector}>Give me an article</button>
-        <p>Want to add an article? Add a url below and click save</p>
-        <AddArticle/>
+        <section>
+          <h2>Too many articles and no time to choose?</h2>
+          <h2>Let us help you out</h2>
+          <p>Click below to begin</p>
+          <button className="goToRandomArticle" type="button"onClick={this.goToArticleSelector}>Give me an article</button>
+        </section>
+        <br/>
+        <section className="addArticle">
+          <p>Want to add an article? Add a url below and click save</p>
+          <AddArticle/>
+        </section>
       </div>
     )
   }
 }
 
-export default Begin;
+export default withRouter(Begin);
