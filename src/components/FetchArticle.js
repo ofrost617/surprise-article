@@ -1,19 +1,18 @@
 import React from 'react';
 import firebase from '../javascripts/firebase.js';
-import articleMetaDataRef from './AddArticle';
 
 
 class FetchArticle extends React.Component {
   constructor() {
     super();
     this.state = {
-      randomArticle: []
+      randomArticle: [],
+      // articleHistory: []
     }
 
     // this.handleChange = this.handleChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
   // Ask Claudia about async await here to avoid hacky page refresh on line 48
    componentDidMount() {
     const articleMetaDataRef = firebase.database().ref('articleMetaData');
@@ -30,7 +29,8 @@ class FetchArticle extends React.Component {
       }
       var randomArticle = newState[Math.floor(Math.random()*newState.length)];
       this.setState({
-        randomArticle: randomArticle,        
+        randomArticle: randomArticle,
+        // articleHistory: this.state.articleHistory.concat(randomArticle)        
       });
     });
   }
@@ -47,11 +47,13 @@ class FetchArticle extends React.Component {
     return (
       <div>
         <section>
-          <img className="thumbnail" src={this.state.randomArticle.thumbnail}/>
+          <img className="thumbnail" src={this.state.randomArticle.thumbnail} alt="Thumbnail cannot be displayed at this time"/>
           <h2 className="articleTitle">{this.state.randomArticle.title}</h2>
           <h3 className="articleDescription">{this.state.randomArticle.description}</h3>
-          <button type="button" onClick={this.refreshPage}>Twist</button>
-          <button type="button" onClick={() => window.open(this.state.randomArticle.url)}>Stick</button>
+          <br/>
+          <br/>
+          <button className="twistButton" type="button" onClick={this.refreshPage}>Twist</button>
+          <button className="stickButton" type="button" onClick={() => window.open(this.state.randomArticle.url)}>Stick</button>
           </section>
       </div>
     )
@@ -60,5 +62,6 @@ class FetchArticle extends React.Component {
 
 export default FetchArticle;
 
-{/* <Route path='/privacy-policy' component={() => window.location = 'https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies'}/> */}
-//  Look into using the above as an alternative to line 53
+
+// component will update
+// gloabal application state held within universal redux state to track previous articles

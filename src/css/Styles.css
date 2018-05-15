@@ -40,12 +40,6 @@ section {
   font-size: 18px;
 }
 
-/* button {
-  font-family: inherit;
-  padding: 5px;
-} */
-
-
 button {
   display:inline-block;
   padding:0.35em 1.2em;
@@ -86,4 +80,15 @@ button:hover {
 .articleDescription {
   font-size: 1em;
   font-weight: lighter !important;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
 }
+
+/* .twistButton {
+
+}
+
+.stickButton { */
+/* } */
