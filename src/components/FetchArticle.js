@@ -36,9 +36,9 @@ class FetchArticle extends React.Component {
     this.getRandomArticle();
   }
   
-  // componentDidMount() {
-  //   this.getRandomArticle()
-  // }
+  componentDidMount() {
+    this.getRandomArticle()
+  }
 
   // refreshPage() { 
   //   window.location.reload(); 
