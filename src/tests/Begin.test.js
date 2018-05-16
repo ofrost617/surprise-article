@@ -24,24 +24,24 @@ describe('Test Begin', () => {
 
 });
 
-describe('<Begin />', () => {
-  it('should render correctly', () => {
-    const goToArticleSelector = jest.fn();
-    const history = createMemoryHistory('/')
-    const renderedComponent = mount(
-      <Begin onClick={goToArticleSelector}/>
-    )
-    expect(renderedComponent.state.history).toBeNull;
-    const button = renderedComponent.find('#goToRandomArticle');
-    button.simulate('click');
-    expect(renderedComponent.state.history).toBeNull;
+// describe('<Begin />', () => {
+//   it('should render correctly', () => {
+//     const goToArticleSelector = jest.fn();
+//     const history = createMemoryHistory('/')
+//     const renderedComponent = mount(
+//       <Begin onClick={goToArticleSelector}/>
+//     )
+//     expect(renderedComponent.state.history).toBeNull;
+//     const button = renderedComponent.find('#goToRandomArticle');
+//     button.simulate('click');
+//     expect(renderedComponent.state.history).toBeNull;
     
-    // expect(goToArticleSelector).toBeCalled();
-    // renderedComponent.setProps
-    // renderedComponent.find('#goToRandomArticle').simulate('click');
-    // expect(mockCallBack.mock.calls.length).toEqual(1);
-  })
-})
+//     // expect(goToArticleSelector).toBeCalled();
+//     // renderedComponent.setProps
+//     // renderedComponent.find('#goToRandomArticle').simulate('click');
+//     // expect(mockCallBack.mock.calls.length).toEqual(1);
+//   })
+// })
 
 
 

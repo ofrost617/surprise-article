@@ -1,7 +1,6 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import AddArticle from '../components/AddArticle';
 
 var mock = new MockAdapter(axios);

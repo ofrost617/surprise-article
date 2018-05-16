@@ -1,16 +1,23 @@
 import React from 'react';
 import enzyme from 'enzyme';
-import { shallow} from 'enzyme';
+import { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import FetchArticle from '../components/FetchArticle';
 
 enzyme.configure({ adapter: new Adapter() });
 
 describe('Test button click to get article', () => {
-  it('Test click event', () => {
-    const fetchArticle = shallow(<FetchArticle />)
-    fetchArticle.set(stat random)
-});
+
+  it('renders with correct text', () => {
+    const fetchArticle = mount(<FetchArticle />)
+    expect(fetchArticle.text()).toContain('Twist');
+  });
+})
+
+//   it('Test click event', () => {
+//     const fetchArticle = shallow(<FetchArticle />)
+//     fetchArticle.set(stat random)
+// });
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -43,4 +50,4 @@ describe('Test button click to get article', () => {
 // // check val of random article is greater than before click
 // // mock dataset with articles in it, pass it into component and check that they aren't the same
 // // create mock json response
-// // look up render component in tests
+// // look up render component in 
