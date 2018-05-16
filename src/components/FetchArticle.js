@@ -1,7 +1,6 @@
 import React from 'react';
 import firebase from '../javascripts/firebase.js';
 
-
 class FetchArticle extends React.Component {
   constructor() {
     super();
@@ -9,10 +8,8 @@ class FetchArticle extends React.Component {
       randomArticle: []
     }
 
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  // Ask Claudia about async await here to avoid hacky page refresh on line 48
 
   getRandomArticle() {
     const articleMetaDataRef = firebase.database().ref('articleMetaData')
@@ -34,18 +31,19 @@ class FetchArticle extends React.Component {
       });
     })    
   }
+
+  handleClick() {
+    this.getRandomArticle();
+  }
   
-  componentDidMount() {
-    this.getRandomArticle()
-  }
-
-  refreshPage() { 
-    window.location.reload(); 
-  }
-
-  // openLink(url) {
-  //   window.open(url);
+  // componentDidMount() {
+  //   this.getRandomArticle()
   // }
+
+  // refreshPage() { 
+  //   window.location.reload(); 
+  // }
+
 
   render() {
     return (
@@ -56,7 +54,7 @@ class FetchArticle extends React.Component {
           <h3 className="articleDescription">{this.state.randomArticle.description}</h3>
           <br/>
           <br/>
-          <button className="twistButton" type="button" onClick={this.refreshPage}>Twist</button>
+          <button className="twistButton" type="button" onClick={this.handleClick}>Twist</button>
           <button className="stickButton" type="button" onClick={() => window.open(this.state.randomArticle.url)}>Stick</button>
           </section>
       </div>
