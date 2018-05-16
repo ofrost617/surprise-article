@@ -36,9 +36,17 @@ class FetchArticle extends React.Component {
     this.getRandomArticle();
   }
   
+  // This works also with cDM- work out which lifecycle method to use
+  // Used cWM here as using a setup that is done at runtime- getting data from firebase API, but the 
+  // that cDM works here too suggests that maybe getting this data can't *only* be done at runtime.
+  // Changed back to cDM as 'You may see people using componentWillMount to start AJAX calls to load 
+  // data for your components. Don’t do this'
+  // Inside cDM 'Basically, here you want to do all the setup you couldn’t do without a DOM, and 
+  // start getting all the data you need'
   componentDidMount() {
     this.getRandomArticle()
   }
+
 
   // refreshPage() { 
   //   window.location.reload(); 

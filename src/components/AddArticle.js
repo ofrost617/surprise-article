@@ -42,6 +42,7 @@ class AddArticle extends React.Component {
   render() {
     return (
       <div>
+        <p className="addArticleCta">{this.props.addArticleCta}</p>
         <form onSubmit={this.handleSubmit}>
           <input className="addArticleInput" type="text" placeholder="Enter a url here" onChange={this.handleChange}/>
           <br/>

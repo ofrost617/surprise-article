@@ -22,8 +22,7 @@ class Begin extends React.Component {
         </section>
         <br/>
         <section className="addArticle">
-          <p className="addArticleCta">Want to add an article? Add a url below and click save</p>
-          <AddArticle/>
+          <AddArticle addArticleCta="Want to add an article? Add a url below and click save"/>
         </section>
       </div>
     )
