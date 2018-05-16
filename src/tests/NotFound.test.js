@@ -6,8 +6,8 @@ import NotFound from '../components/NotFound';
 
 enzyme.configure({ adapter: new Adapter() });
 
-describe('Test button click to get article', () => {
-  it('Test click event', () => {
+describe('Test NotFound', () => {
+  it('renders text not found when rendered', () => {
     const notFound = shallow(<NotFound/>)
     expect(notFound.text()).toEqual('Not Found!');
   });

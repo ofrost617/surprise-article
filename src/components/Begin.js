@@ -1,18 +1,18 @@
 import React from 'react';
-// import { withRouter} from 'react-router-dom';
+import Header from './Header';
 import AddArticle from './AddArticle';
 import '../css/Styles.css';
 
 class Begin extends React.Component {
 
   goToArticleSelector = (event) => {
-    this.props.history.push(`article`)
-
+    this.props.history.push(`article`);
   }
+  
   render() {
     return (
       <div>
-        <h1>Welcome to Article Blackjack!</h1>
+        <Header appname="Welcome to Article Blackjack!"/>
         <br/>
         <section>
           <h2>Too many articles and no time to choose?</h2>

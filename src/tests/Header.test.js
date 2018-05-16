@@ -6,8 +6,8 @@ import Header from '../components/Header';
 
 enzyme.configure({ adapter: new Adapter() });
 
-describe('Test button click to get article', () => {
-  it('Test click event', () => {
+describe('Test header', () => {
+  it('renders with correct text', () => {
     const header = shallow(<Header appname="Article Blackjack"/>)
     expect(header.text()).toEqual('Article Blackjack');
   });

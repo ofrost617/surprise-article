@@ -6,16 +6,16 @@ class FetchArticle extends React.Component {
   constructor() {
     super();
     this.state = {
-      randomArticle: [],
-      // articleHistory: []
+      randomArticle: []
     }
 
     // this.handleChange = this.handleChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
   // Ask Claudia about async await here to avoid hacky page refresh on line 48
-   componentDidMount() {
-    const articleMetaDataRef = firebase.database().ref('articleMetaData');
+
+  getRandomArticle() {
+    const articleMetaDataRef = firebase.database().ref('articleMetaData')
     articleMetaDataRef.on('value', (snapshot) => {
       let articleMetaData = snapshot.val();
       let newState = [];
@@ -29,10 +29,14 @@ class FetchArticle extends React.Component {
       }
       var randomArticle = newState[Math.floor(Math.random()*newState.length)];
       this.setState({
-        randomArticle: randomArticle,
+        randomArticle: randomArticle
         // articleHistory: this.state.articleHistory.concat(randomArticle)        
       });
-    });
+    })    
+  }
+  
+  componentDidMount() {
+    this.getRandomArticle()
   }
 
   refreshPage() { 
